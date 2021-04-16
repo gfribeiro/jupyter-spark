@@ -1,0 +1,13 @@
+version: '3'
+services:
+
+  jspark:
+    image: jspark
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - 8888:8888
+      - 4040:4040
+    volumes:
+      - "./notebooks:/home/jovyan"
